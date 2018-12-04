@@ -7,5 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Person.create(name: 'Anastasia', surname: 'Mardar', age: 21, phone: '+380983967627', country: 'Ukraine' )
-Person.create(name: 'Anastasia', surname: 'Anastasia', age: 21, phone: '+380983967627', country: 'Ukraine' )
+# Person.create(name: 'Anastasia', surname: 'Mardar', age: 21, phone: '+380983967627', country: 'Ukraine' )
+# Person.create(name: 'Anastasia', surname: 'Anastasia', age: 21, phone: '+380983967627', country: 'Ukraine' )
+ 10.times do
+   Person.create(
+     name: Faker::Name.first_name ,
+     surname: Faker::Name.last_name,
+     age: Faker::Number.between(20, 40),
+     phone: Faker::PhoneNumber.cell_phone,
+     country: Faker::Nation.capital_city
+   )
+ end
