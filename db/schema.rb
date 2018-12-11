@@ -32,9 +32,10 @@ ActiveRecord::Schema.define(version: 2018_12_05_143615) do
     t.decimal "age"
     t.string "phone"
     t.string "country"
+    t.integer "address_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index [nil], name: "index_people_on_address_id"
+    t.index ["address_id"], name: "index_people_on_address_id"
   end
 
 end
