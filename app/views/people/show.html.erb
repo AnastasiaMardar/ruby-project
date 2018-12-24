@@ -1,34 +1,39 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Ім'я:</strong>
   <%= @person.name %>
 </p>
 
 <p>
-  <strong>Surname:</strong>
+  <strong>Прізвище:</strong>
   <%= @person.surname %>
 </p>
 
 <p>
-  <strong>Age:</strong>
+  <strong>Вік:</strong>
   <%= @person.age %>
 </p>
 
 <p>
-  <strong>Phone:</strong>
+  <strong>Номер телефону:</strong>
   <%= @person.phone %>
 </p>
 
 <p>
-  <strong>Country:</strong>
+  <strong>Країна:</strong>
   <%= @person.country %>
 </p>
 
 <p>
-  <strong>Address:</strong>
+  <strong>Вулиця:</strong>
   <%= @person.address.street %>
 </p>
 
-<%= link_to 'Edit', edit_person_path(@person) %> |
-<%= link_to 'Back', people_path %>
+<p>
+  <strong>Номер будинку:</strong>
+  <%= @person.address.house_number %>
+</p>
+
+<%= link_to 'Редагувати', edit_person_path(@person) %> |
+<%= link_to 'Видалити', people_path %>

@@ -6,7 +6,7 @@ class CreatePeople < ActiveRecord::Migration[5.2]
       t.decimal :age
       t.string :phone
       t.string :country
-      t.belongs_to :address, index: true, foreign_key: true
+      t.belongs_to :address, index: true
 
       t.timestamps
     end

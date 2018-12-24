@@ -15,6 +15,7 @@ class AddressesController < ApplicationController
   # GET /addresses/new
   def new
     @address = Address.new
+    10.times {@address.people.build}
   end
 
   # GET /addresses/1/edit
@@ -28,6 +29,7 @@ class AddressesController < ApplicationController
 
     respond_to do |format|
       if @address.save
+        # redirect_to address_path(@address)
         format.html { redirect_to @address, notice: 'Address was successfully created.' }
         format.json { render :show, status: :created, location: @address }
       else
